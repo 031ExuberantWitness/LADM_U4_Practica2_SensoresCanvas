@@ -16,22 +16,4 @@ class Figura(Lienzo:Lienzo, imagen:Int, coordX:Float, coordY: Float) {
         var p = Paint()
         c.drawBitmap(imagen, x, y, p)
     }
-
-    fun mover(xToque: Float, yToque: Float){
-        x = xToque - imagen.width/2
-        y = yToque - imagen.height/2
-    }
-
-    fun determinarArea(xToque: Float, yToque: Float) : Boolean {
-        var x2 = x + imagen.width
-        var y2 = y + imagen.height
-
-        if (xToque >= x && xToque <= x2){
-            if (yToque >= y && yToque <= y2){
-                return true
-            }
-        }
-
-        return false
-    }
 }

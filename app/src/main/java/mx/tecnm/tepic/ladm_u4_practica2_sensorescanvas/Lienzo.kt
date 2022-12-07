@@ -15,7 +15,6 @@ class Lienzo(p: Inicio): View(p) {
     val nube3 = BitmapFactory.decodeResource(resources, R.drawable.nube3)
     val nube4 = BitmapFactory.decodeResource(resources, R.drawable.nube4)
 
-    //Posicion default: X: 500F, Y: 150F
     val sol = BitmapFactory.decodeResource(resources, R.drawable.sol)
     val luna = BitmapFactory.decodeResource(resources, R.drawable.luna)
 
@@ -24,8 +23,6 @@ class Lienzo(p: Inicio): View(p) {
     override fun onDraw(c: Canvas) {
         super.onDraw(c)
         var p = Paint()
-
-        val randomizer = (0..10).random()
 
         if (punteroFigura.dia){
             val girox = punteroFigura.girosX * 100
